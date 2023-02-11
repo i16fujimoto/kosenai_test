@@ -1,0 +1,27 @@
+# contens model
+type: object
+description: Contents API
+required:
+  - userId
+  - contents
+properties: 
+  userId: 
+    type: string
+    description: User's ObjectID
+    example: 6396977c8a6c86550d986ba6
+  contents: # 配列に入れ子でオブジェクトを入れる
+    type: array
+    items:
+      type: object
+      properties:
+        id: 
+          type: string
+          description: Content's ObjectID
+          example: 639698848a6c86550d986baa
+        content: 
+          type: string
+          description: Content Name 
+          example: test content
+        
+
+

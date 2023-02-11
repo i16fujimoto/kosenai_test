@@ -1,0 +1,12 @@
+# Error model
+type: object
+required: 
+  - status
+  - message
+properties:
+  status: 
+    type: integer
+    format: int64
+  message: 
+    type: string
+  

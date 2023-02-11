@@ -1,0 +1,17 @@
+Django==3.2
+djongo
+djangorestframework
+django-filter
+python-dotenv
+djangorestframework-camel-case
+django-cors-headers
+django-storages
+boto3
+pandas
+numpy
+poetry
+pymongo==3.12.1
+flake8==5.0.4
+mypy==1.0.0
+black==23.1.0
+isort==5.12.0

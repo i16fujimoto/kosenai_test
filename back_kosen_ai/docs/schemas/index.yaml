@@ -1,0 +1,8 @@
+Contents:
+  $ref: './Contents.yaml'
+Diagnosis:
+  $ref: './Diagnosis.yaml'
+Results:
+  $ref: './Results.yaml'
+Error:
+  $ref: './Error.yaml'

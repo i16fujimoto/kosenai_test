@@ -1,0 +1,35 @@
+# index file
+openapi: 3.0.0
+info:
+  title: KosenAI API Documentation
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:4010
+    description: Mock server
+  - url: http://localhost:8000
+    description: Development server
+  - url: https://stg.sample-server.com/v1
+    description: Staging server
+  - url: https://api.sample-server.com/v1
+    description: Production server
+
+tags:
+  - name: Contents
+    description: Contents API
+  - name: Diagnosis
+    description: Diagnosis API
+  - name: Results
+    description: Results API
+
+paths:
+  /kosenai/contents:
+    $ref: './paths/contents.yaml'
+  /kosenai/diagnosis:
+    $ref: './paths/diagnosis.yaml'
+  /kosenai/result:
+    $ref: './paths/results.yaml'
+
+components:
+  schemas:
+    $ref: './schemas/index.yaml'

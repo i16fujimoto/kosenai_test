@@ -1,0 +1,39 @@
+type: object
+description: Diagnosis API
+required: 
+  - content
+  - questions
+properties:
+  content: 
+    type: string
+    description: detail content
+    example: "高専RPG診断"
+  questions:
+    type: array
+    items:
+      type: object
+      properties: 
+        question: 
+          type: string
+          example: テスト自体の難易度というより、科目の好き嫌いが原因で科目ごとの点数の差が激しい。
+        questionId:
+          type: string
+          example: 639698ba6404442a7d44ce67
+        options:
+          type: array
+          items:
+            type: string
+            example:
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+        image:
+          type: string
+          format: byte
+          example: iVBORw0KGgoAAAANSUhEUgAAASwAAAEsBAMAAACLU5NGAAAAG1BMVEUAEf////8fLv9fav9/iP+fpf+/w/8/TP/f4f9PHlpdAAAEs0lEQVR4nO2YzXebRhTF0SAJLTOJpbCU6tTO0mrVNsvQyqmXxrFTL0N72mQZxcfN1iRx2z+7zJsPhidAk1Mturi/hcQA9/J4M/MYiCIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD7R6yufr9877W/e3X1s3f8sDr8Lszq8LSSzjul3LmP21IqfrHtmNqf3PFnqpmeBDgl1+Q0dYEwKXfu43sp7y/Xr6Q8121RyPv1aSl/NcePZHq5vpaz+U6nuJDp1fq0kNN2KXfuRc6+UX+H5Uy3n8o31W9SpNpMlDN183/KjzudBvI3pRHP5OtWKXPuZ2pOOpLP6b88oL/YmE3M7uVus8GF/hfFQauUOffjrlY+UL9D4xUtdVdk2qsyO9/lJOzGRLZJuXMgy0fqd2H6MhpJ1QPCdEgU5Y+DnWJ50iJlzqEMDhpX1661hXMNgPLCpcw5lAnltpbkD1WsLpiRnAdblectUuYcCmVL55/YqE7VPatIZEjp0lC2mJQ7h7JQJ4+ka0/U3eYPXLt87Ta/qlVJi5OgCJiUO4eyfNhUjNJmLPmdu+w/c7e3aBm+MXUak3LnUMhmUE/eoTL3ykLmRkRSV56xnfU+OgIm5c6BjGniLOpuT6odwhtQm7pCbFxtNZWzSaHO5FLmHIgoHrFrK1/foOH70d7L822rIwqIS5lzGEmeksvSm7vVJWMv3QMvMTZdbcm6lX+rPy5lzrs5/vDtizLVZ2ZN8bAjLJMunizx4Wb1Vn6mbS7NvjSsrFoEzUzGs3pWqzE7rGe1P2Ztuniyhmo99cZuN6XMOSwsOT3ZCqtshjXxw6J0bY0sCku+3AprMt1yDkHcvDCLyNCwKF1tI+t4Vej15x7CUi7l9IvCqtLVOg0rzqiP9hNW9XA4j8LHlkpXa81S5NNoD2PLmqnCEjgTI5WuzvlES5r/PBMNT9Ujw6sugtWtBUtO0fkIEeo5xqXMORhaFXm1OGFVni1HxrJ7Ta4WVFzKnIMhH+8JE7Nn4rK5ai4ONp1vHSoELmXOwZBP0ApCUU3DpDNdFMJ+VhA6rHG9FKLN4s61vc1IF/jOdFFYTMqdQ6Ee926Ebs9LUWNWU83qTBcNQyblzqFQj3ujkdbi9TiPG+NU16yudNEwZFLuHIpebJd37sqq/k1cvsdeebRPw6505W1S5hyKXupm9k4S8wix97jxM28LfEe6aP3Npcw5FC1b2Hsc01gQ8s5G4k1E9zRsT9fQvFU3pcy5H/dCFevXy9i+ZeY6IUvzwjLyK3P9NPTT5YqR0TApd+5lZL+CZeYCuf4cNTImI/M5Kvfe7ZI6RG8zujadNjQp5FLm3B+WnKrvW+JMr8BVij9X6iel/VhWpD/SYf9j2arevK03c/lSaZ6U6btWKXfu5UzKv/54Wy1P7cmZTFXbDsuhOl7KgFIzLCtldaq86JAy5370t9N7dwsib3xKjb5ufg/tQX87TS/cDiblzv2Im/VP7/0dVduPIlmtfwi0Oq5OnfdImTMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4P/Ev91T1MAGtnY5AAAAAElFTkSuQmCC
+
+      
+

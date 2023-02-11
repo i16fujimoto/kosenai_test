@@ -1,0 +1,98 @@
+post:
+  tags:
+    - Results
+  summary: Post Results
+  description: Post results student
+  requestBody:
+    description: answers list
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            answerList:
+              type: array
+              items:
+                type: object
+                properties:
+                  userId:
+                    type: string
+                    example: 6396977c8a6c86550d986ba6
+                  contentId:
+                    type: string
+                    example: 639698848a6c86550d986baa
+                  answer:
+                    type: object
+                    properties:
+                      questionId:
+                        type: string
+                        example: 639698ba6404442a7d44ce67
+                      selectOption:
+                        type: int
+                        example: 2
+  responses: # status codeごとに記述
+    200:
+      description: OK
+      content: 
+        application/json:
+          schema:
+            $ref: '../schemas/Results.yaml'
+
+    400:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 400
+            message: Bad Request
+
+    401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 401
+            message: Unauthorized
+    403:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 403
+            message: Invalid token
+    404:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 404
+            message: Not Found
+
+    500:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 500
+            message: Internal Server Error
+
+
+
+
+
+
+
+
+
+            

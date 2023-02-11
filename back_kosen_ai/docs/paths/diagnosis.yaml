@@ -1,0 +1,78 @@
+# diagnosis API path
+
+get:
+  tags: 
+    - Diagnosis
+  summary: Get Diagnosis
+  description: Get diagnosis specified id
+  requestBody:
+    description: specify id
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            contentId:
+              type: string
+              example: 639698848a6c86550d986baa
+  responses: # status codeごとに記述
+    200:
+      description: OK
+      content: 
+        application/json:
+          schema:
+            $ref: '../schemas/Diagnosis.yaml'
+
+    400:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 400
+            message: Bad Request
+
+    401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 401
+            message: Unauthorized
+    403:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 403
+            message: Invalid token
+    404:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 404
+            message: Not Found
+
+    500:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 500
+            message: Internal Server Error
+
+
+
+
+

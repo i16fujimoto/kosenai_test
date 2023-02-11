@@ -1,0 +1,63 @@
+# content API path
+
+get:
+  tags: # tagsは配列
+    - Contents
+  summary: Get Contents
+  description: Get all contents of the collection
+  parameters: []
+  responses: # status codeごとに記述
+    200:
+      description: OK
+      content: 
+        application/json:
+          schema:
+            $ref: '../schemas/Contents.yaml'
+
+    400:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 400
+            message: Bad Request
+
+    401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 401
+            message: Unauthorized
+    403:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 403
+            message: Invalid token
+    404:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 404
+            message: Not Found
+
+    500:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+          example:
+            status: 500
+            message: Internal Server Error

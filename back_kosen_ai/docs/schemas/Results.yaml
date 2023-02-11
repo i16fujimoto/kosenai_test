@@ -1,0 +1,29 @@
+type: object
+description: Results API
+required:
+  - resultTitle
+  - resultType
+  - resultAdvice
+  - resultParams
+properties:
+  resultTitle:
+    type: string
+    example: test result title
+  resultType:
+    type: string
+    example: test result type
+  resultAdvice:
+    type: string
+    example: test resultAdvice
+  resultParams:
+    type: object
+    properties:
+      studyEnv:
+        type: int
+        example: 25
+      mind:
+        type: int
+        example: 25
+      process:
+        type: int
+        example: 25

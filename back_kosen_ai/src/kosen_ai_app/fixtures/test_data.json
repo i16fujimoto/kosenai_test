@@ -1,0 +1,376 @@
+[
+    {
+        "model": "kosen_ai_app.content",
+        "pk": "639698848a6c86550d986baa",
+        "fields": {
+            "content": "test_content",
+            "target": "student",
+            "access_cnt": 0,
+            "explanation_detail": "this is a test content."
+        }
+    },
+    {
+        "model": "kosen_ai_app.user",
+        "pk": "6396977c8a6c86550d986ba6",
+        "fields": {
+            "created_at": "2022-12-12T02:52:44.931Z",
+            "updated_at": "2022-12-12T02:52:44.931Z",
+            "name": null,
+            "kosen_name": null,
+            "major": null,
+            "email": null,
+            "password": null,
+            "access_content": null
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "639698ba6404442a7d44ce67",
+        "fields": {
+            "content": "test_content",
+            "question": "study_env1",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"1\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"5\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a5686f588b03743888b415",
+        "fields": {
+            "content": "test_content",
+            "question": "study_env2",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"1\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"5\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a5688f588b03743888b416",
+        "fields": {
+            "content": "test_content",
+            "question": "study_env3",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"8\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"10\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a5689a588b03743888b417",
+        "fields": {
+            "content": "test_content",
+            "question": "study_env4",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"8\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"10\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a568c6588b03743888b418",
+        "fields": {
+            "content": "test_content",
+            "question": "study_env5",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"9\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"12\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"15\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a5692e588b03743888b419",
+        "fields": {
+            "content": "test_content",
+            "question": "mind1",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"1\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"5\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a5693a588b03743888b41a",
+        "fields": {
+            "content": "test_content",
+            "question": "mind2",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"1\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"5\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a5694e588b03743888b41b",
+        "fields": {
+            "content": "test_content",
+            "question": "mind3",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"8\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"10\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a56958588b03743888b41c",
+        "fields": {
+            "content": "test_content",
+            "question": "mind4",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"8\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"10\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a56962588b03743888b41d",
+        "fields": {
+            "content": "test_content",
+            "question": "mind5",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"9\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"12\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"15\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a56992588b03743888b41e",
+        "fields": {
+            "content": "test_content",
+            "question": "process1",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"1\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"5\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a569a0588b03743888b41f",
+        "fields": {
+            "content": "test_content",
+            "question": "process2",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"1\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"5\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a569aa588b03743888b420",
+        "fields": {
+            "content": "test_content",
+            "question": "process3",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"8\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"10\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a569bb588b03743888b421",
+        "fields": {
+            "content": "test_content",
+            "question": "process4",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"2\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"4\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"8\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"10\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.question",
+        "pk": "63a569c9588b03743888b422",
+        "fields": {
+            "content": "test_content",
+            "question": "process5",
+            "options": "[\"['a'\", \" 'b'\", \" 'c'\", \" 'd'\", \" 'e'\", \" 'f']\"]",
+            "weight": "[{\"_id\": \"639a8fe94110d40609bfa091\", \"weight_study_env\": \"0\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa092\", \"weight_study_env\": \"3\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa093\", \"weight_study_env\": \"6\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa094\", \"weight_study_env\": \"9\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa095\", \"weight_study_env\": \"12\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}, {\"_id\": \"639a8fe94110d40609bfa096\", \"weight_study_env\": \"15\", \"weight_mind\": \"0\", \"weight_process\": \"0\"}]",
+            "img": "image.jpg",
+            "correct_answer": null,
+            "explanation_number": null,
+            "explanation_title": null,
+            "explanation_image": "test",
+            "explanation_detail": "test",
+            "created_at": "2022-12-12T02:58:02.902Z",
+            "updated_at": "2022-12-12T02:58:02.902Z"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c133d5e652f1694e5677a",
+        "fields": {
+            "type": "SDF",
+            "type_img": "image.jpg",
+            "type_title": "SDF_title",
+            "type_advice": "SDF_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13d75e652f1694e5677b",
+        "fields": {
+            "type": "SDL",
+            "type_img": "image.jpg",
+            "type_title": "SDL_title",
+            "type_advice": "SDL_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13da5e652f1694e5677c",
+        "fields": {
+            "type": "SRF",
+            "type_img": "image.jpg",
+            "type_title": "SRF_title",
+            "type_advice": "SRF_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13e95e652f1694e5677d",
+        "fields": {
+            "type": "SRL",
+            "type_img": "image.jpg",
+            "type_title": "SRL_title",
+            "type_advice": "SRL_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13ec5e652f1694e5677e",
+        "fields": {
+            "type": "PDF",
+            "type_img": "image.jpg",
+            "type_title": "PDF_title",
+            "type_advice": "PDF_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13ef5e652f1694e5677f",
+        "fields": {
+            "type": "PDL",
+            "type_img": "image.jpg",
+            "type_title": "PDL_title",
+            "type_advice": "PDL_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13f25e652f1694e56780",
+        "fields": {
+            "type": "PRF",
+            "type_img": "image.jpg",
+            "type_title": "PRF_title",
+            "type_advice": "PRF_advice"
+        }
+    },
+    {
+        "model": "kosen_ai_app.type_classification_content_type",
+        "pk": "639c13f45e652f1694e56781",
+        "fields": {
+            "type": "PRL",
+            "type_img": "image.jpg",
+            "type_title": "PRL_title",
+            "type_advice": "PRL_advice"
+        }
+    }
+]
