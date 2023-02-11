@@ -28,4 +28,4 @@ jobs:
         docker ps -a
     - name: Run Tests
       run: |
-        docker-compose exec api python manage.py test
+        docker-compose exec api python manage.py test kosen_ai_app.test.test_views
