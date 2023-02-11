@@ -95,6 +95,9 @@ DATABASES = {
             "host": os.environ["DATABASE_HOST"],
             "port": int(os.environ["PORT"]),
         },
+        "TEST":{
+             'NAME': 'test_database',
+        }
     }
 }
 
