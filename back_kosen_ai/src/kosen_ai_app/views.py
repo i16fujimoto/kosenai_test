@@ -4,22 +4,14 @@ from bson.objectid import ObjectId
 from rest_framework import views
 from rest_framework.response import Response
 
-from .models import (
-    Answer,
-    Content,
-    Question,
-    User,
-    type_classification_content_Result,
-    type_classification_content_Type,
-)
-from .serializers import (
-    ContentSerializer,
-    DiagnosisSerializer,
-    ResultSerializer,
-    UserSerializer,
-)
+from .models import (Answer, Content, Question, User,
+                     type_classification_content_Result,
+                     type_classification_content_Type)
+from .serializers import (ContentSerializer, DiagnosisSerializer,
+                          ResultSerializer, UserSerializer)
 
 # Create your views here.
+
 
 class GetContents(views.APIView):
     def get(self, request):
@@ -58,9 +50,7 @@ class GetDiagnosis(views.APIView):
         questions = Question.objects.filter(content___id=content_id)
         question_data = DiagnosisSerializer(questions, many=True).data
 
-        return Response(
-            {"content": content, "questions": question_data}, status=200
-        )
+        return Response({"content": content, "questions": question_data}, status=200)
 
 
 class GetResult(views.APIView):
@@ -74,9 +64,7 @@ class GetResult(views.APIView):
         for answer_dict in request.data.get("answer_list"):
             answer_dict["_id"] = ObjectId()
 
-            answer, created = Answer.objects.get_or_create(
-                user=user, content=content
-            )
+            answer, created = Answer.objects.get_or_create(user=user, content=content)
             if created:
                 answer.chosen_answer = [answer_dict]
             else:

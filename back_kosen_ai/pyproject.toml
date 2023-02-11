@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["i16fujimoto <fujimoto.ryusei@arakawa-lab.com>"]
 readme = "README.md"
-packages = [{include = "kosenai_back"}]
+packages = [{include = "back_kosen_ai"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -19,7 +19,7 @@ flake8-builtins = "^2.1.0"
 flake8-unused-arguments = "^0.0.13"
 flake8-pytest-style = "^1.7.0"
 pep8-naming = "^0.13.3"
-mypy = "^1.0.0"
+mypy = "0.982"
 black = "^23.1.0"
 isort = "^5.12.0"
 flake8-eradicate = "^1.4.0"
@@ -59,6 +59,8 @@ include_trailing_comma = true
 
 # type checker (linter)
 [tool.mypy]
+# django用のプラグインを導入
+plugins = ["mypy_django_plugin.main"]
 # エラー時のメッセージを詳細表示
 show_error_context = true
 # エラー発生箇所の行数/列数を表示
@@ -77,3 +79,5 @@ warn_unused_ignores = true
 # 冗長なキャストに警告
 warn_redundant_casts = true
 
+[tool.django-stubs]
+django_settings_module = "pj_kosen_ai.settings"
