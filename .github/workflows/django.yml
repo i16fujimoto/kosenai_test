@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7, 3.8]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     # Docker
-    - name: Docker build
+    - name: Docker Containar builds
       run: |
         docker-compose up -d --build
         docker ps -a
