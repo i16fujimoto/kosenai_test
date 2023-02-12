@@ -39,4 +39,4 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
     - name: Run Tests
       run: |
-        docker-compose exec api python manage.py test
+        docker-compose exec -T api python manage.py test
