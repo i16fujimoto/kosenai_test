@@ -45,4 +45,4 @@ jobs:
     # 環境変数を参照できないのはコンテナ内だから？
     - name: Run Tests
       run: | # runだとできるがexecだとできないなぜ．．．
-        docker-compose run --rm api python manage.py test
+        docker-compose exec api python manage.py test
