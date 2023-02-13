@@ -44,5 +44,5 @@ jobs:
     # Unit Test
     # 環境変数を参照できないのはコンテナ内だから？
     - name: Run Tests
-      run: | # runだとできるがexecだとできないなぜ．．．(-v: --verbosity)
-        docker-compose exec -t api python manage.py test -v 2
+      run: | # runだとできるがexecだとできないなぜ．．．(-v: --verbosity, -T: ttyの設定（擬似ターミナル出力のため）)
+        docker-compose exec -T api python manage.py test -v 2
