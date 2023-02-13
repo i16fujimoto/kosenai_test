@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8.x]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v3
@@ -56,6 +56,17 @@ jobs:
         ENGINE: ${{ secrets.ENGINE }}
         PORT: ${{ secrets.PORT }}
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
     - name: Run Tests
       run: | # runだとできるがexecだとできないなぜ．．．
         docker-compose run --rm api python manage.py test
+      env:
+        MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
+        MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
+        MONGO_INITDB_ROOT_USERNAME: ${{ secrets.MONGO_INITDB_ROOT_USERNAME }}
+        MONGO_INITDB_ROOT_PASSWORD: ${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}
+        DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+        DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+        ENGINE: ${{ secrets.ENGINE }}
+        PORT: ${{ secrets.PORT }}
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
