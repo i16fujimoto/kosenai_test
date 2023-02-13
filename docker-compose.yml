@@ -7,6 +7,12 @@ services:
     container_name: "django_api"
     volumes:
       - ./back_kosen_ai/src:/src
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_NAME: ${DATABASE_NAME}
+      ENGINE: ${ENGINE}
+      PORT: ${PORT}
+      SECRET_KEY: ${SECRET_KEY}
     stdin_open: true # 標準入出力とエラー出力をコンテナに結びつける設定 (dockerコマンドの -i オプション)
     tty: true # 擬似端末(キーボードによる入力)をコンテナに結びつける設定 (dockerコマンドの -t オプション)
     command:
