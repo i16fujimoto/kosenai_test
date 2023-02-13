@@ -13,6 +13,10 @@ services:
       ENGINE: ${ENGINE}
       PORT: ${PORT}
       SECRET_KEY: ${SECRET_KEY}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
     stdin_open: true # 標準入出力とエラー出力をコンテナに結びつける設定 (dockerコマンドの -i オプション)
     tty: true # 擬似端末(キーボードによる入力)をコンテナに結びつける設定 (dockerコマンドの -t オプション)
     command:
