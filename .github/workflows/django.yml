@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8]
+        python-version: [3.8.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -23,13 +23,29 @@ jobs:
         python-version: ${{ matrix.python-version }}
         architecture: x64
 
-    # .envファイルを作成
-    - name: generate .env
-      # 権限を755に変えてset-up-env.test.shを実行します
-      # 権限を変えないとpermisson deniedと怒られ、実行できなくなります
-      run: chmod +x set-up-env.test.sh && sh set-up-env.test.sh
-      # 後述のsecretsを設定します
-      # secretsの環境変数の値を変数に代入します
+    # # .envファイルを作成
+    # - name: generate .env
+    #   # 権限を755に変えてset-up-env.test.shを実行します
+    #   # 権限を変えないとpermisson deniedと怒られ、実行できなくなります
+    #   run: chmod +x set-up-env.test.sh && sh set-up-env.test.sh
+    #   # 後述のsecretsを設定します
+    #   # secretsの環境変数の値をMYSQL_ROOT_PASSWORDなどの変数に代入します
+    #   env:
+    #     MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
+    #     MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
+    #     MONGO_INITDB_ROOT_USERNAME: ${{ secrets.MONGO_INITDB_ROOT_USERNAME }}
+    #     MONGO_INITDB_ROOT_PASSWORD: ${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}
+    #     DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+    #     DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+    #     ENGINE: ${{ secrets.ENGINE }}
+    #     PORT: ${{ secrets.PORT }}
+    #     SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
+    # Docker
+    - name: Docker Containar builds
+      run: |
+        docker-compose up -d --build
+        docker ps -a
       env:
         MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
         MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
@@ -40,14 +56,6 @@ jobs:
         ENGINE: ${{ secrets.ENGINE }}
         PORT: ${{ secrets.PORT }}
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
-
-    # Docker
-    - name: Docker Containar builds
-      run: |
-        docker-compose up -d --build
-        docker ps -a
-
-    # Unit Test
     - name: Run Tests
-      run: |
-        docker-compose exec -T api python manage.py test
+      run: | # runだとできるがexecだとできないなぜ．．．
+        docker-compose run --rm api python manage.py test
