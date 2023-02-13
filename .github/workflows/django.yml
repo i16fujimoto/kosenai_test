@@ -22,11 +22,14 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64
-    # Docker
-    - name: Docker Containar builds
-      run: |
-        docker-compose up -d --build
-        docker ps -a
+
+    # .envファイルを作成
+    - name: generate .env
+      # 権限を755に変えてset-up-env.test.shを実行します
+      # 権限を変えないとpermisson deniedと怒られ、実行できなくなります
+      run: chmod +x set-up-env.test.sh && sh set-up-env.test.sh
+      # 後述のsecretsを設定します
+      # secretsの環境変数の値をMYSQL_ROOT_PASSWORDなどの変数に代入します
       env:
         MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
         MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
@@ -37,6 +40,14 @@ jobs:
         ENGINE: ${{ secrets.ENGINE }}
         PORT: ${{ secrets.PORT }}
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
+    # Docker
+    - name: Docker Containar builds
+      run: |
+        docker-compose up -d --build
+        docker ps -a
+
+    # Unit Test
     - name: Run Tests
       run: |
-        docker-compose exec -T api python manage.py test
+        docker-compose run --rm api python manage.py test
