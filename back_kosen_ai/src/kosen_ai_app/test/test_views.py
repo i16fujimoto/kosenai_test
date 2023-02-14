@@ -1,8 +1,9 @@
 from django.test import TestCase
 from rest_framework.test import APIRequestFactory
+import pytest
 
-from ..models import Content, User, Question
-from ..views import GetContents, GetDiagnosis, GetResult
+from kosen_ai_app.models import Content, User, Question
+from kosen_ai_app.views import GetContents, GetDiagnosis, GetResult
 
 
 class APIViewTests(TestCase):

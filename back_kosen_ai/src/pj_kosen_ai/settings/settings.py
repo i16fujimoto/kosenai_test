@@ -14,6 +14,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 from os.path import join, dirname
+from django.conf import settings
 
 load_dotenv(verbose=True)
 
@@ -47,8 +48,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
-    "kosen_ai_app",
+    "kosen_ai_app.apps.KosenAiAppConfig",
+    "django.contrib.sites",
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -96,11 +100,10 @@ DATABASES = {
             "port": int(os.environ["PORT"]),
         },
         "TEST":{
-             'NAME': 'test_database',
+            'NAME': 'test_database',
         }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

@@ -42,7 +42,12 @@ jobs:
         docker ps -a
 
     # Unit Test
-    # 環境変数を参照できないのはコンテナ内だから？
+    # 環境変数を参照できないのはコンテナ内だから？envで中で設定するよりcomposeで設定した方が良い？
+    # composeとDockerfileは同じ階層においた方がよい？(envを同じにできるから)
     - name: Run Tests
-      run: | # runだとできるがexecだとできないなぜ．．．(-v: --verbosity, -T: ttyの設定（擬似ターミナル出力のため）)
-        docker-compose exec -T api python manage.py test -v 2
+      # runだとできるがexecだとできないなぜ → ttyの設定が必要（出力のため）
+      # (-v: --verbosity, -T: これを入れることで疑似ttyの割り当てを無効化 → GitHub ActionsのrunnerOS内にはttyデバイスはなく、docker-composeコマンドでデフォルトで疑似ttyの割り当てされます)
+      # -vについてはこちらを参考：https://docs.djangoproject.com/ja/4.1/ref/django-admin/#cmdoption-verbosity
+      # もしくは　https://engineeeer.com/4-pytest-options/#toc2
+      run: |
+        docker-compose exec -T api poetry run pytest -v --cov=kosen_ai_app/test

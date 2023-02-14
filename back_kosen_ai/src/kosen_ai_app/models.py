@@ -6,6 +6,10 @@ from bson.objectid import ObjectId
 
 
 class Content(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     TARGET_CHOICES = [
         ("parents", "親"),
         ("student", "学生"),
@@ -22,12 +26,21 @@ class Content(models.Model):
 
 
 class AccessContent(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     content_id = models.CharField(max_length=50)
     content_result = models.CharField(max_length=50)
 
 
 class User(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -45,6 +58,10 @@ class User(models.Model):
 
 
 class type_classification_content_Weight(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     weight_study_env = models.IntegerField()
     weight_mind = models.IntegerField()
@@ -52,6 +69,10 @@ class type_classification_content_Weight(models.Model):
 
 
 class Question(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     content = models.ForeignKey(Content, on_delete=models.CASCADE, to_field="content")
     question = models.CharField(max_length=50)
@@ -71,6 +92,10 @@ class Question(models.Model):
 
 
 class Param(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     study_env = models.IntegerField()
     mind = models.IntegerField()
@@ -78,6 +103,10 @@ class Param(models.Model):
 
 
 class type_classification_content_Type(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     type = models.CharField(max_length=50)
     type_img = models.CharField(max_length=100)
@@ -89,6 +118,10 @@ class type_classification_content_Type(models.Model):
 
 
 class type_classification_content_Result(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     type = models.ForeignKey(type_classification_content_Type, on_delete=models.CASCADE)
@@ -98,12 +131,20 @@ class type_classification_content_Result(models.Model):
 
 
 class ChosenAnswer(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField()
     question_id = models.CharField(max_length=50)
     select_option = models.CharField(max_length=100)
 
 
 class Answer(models.Model):
+
+    class Meta:
+        app_label = "kosen_ai_app"
+
     _id = models.ObjectIdField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.ForeignKey(Content, on_delete=models.CASCADE)

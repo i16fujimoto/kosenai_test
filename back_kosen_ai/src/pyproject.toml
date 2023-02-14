@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["i16fujimoto <fujimoto.ryusei@arakawa-lab.com>"]
 readme = "README.md"
-packages = [{include = "back_kosen_ai"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -23,6 +22,10 @@ mypy = "0.982"
 black = "^23.1.0"
 isort = "^5.12.0"
 flake8-eradicate = "^1.4.0"
+pytest = "^7.2.1"
+pytest-django = "^4.5.2"
+pytest-cov = "^4.0.0"
+pytest-custom-exit-code = "^0.3.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -80,4 +83,4 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 
 [tool.django-stubs]
-django_settings_module = "pj_kosen_ai.settings"
+django_settings_module = "pj_kosen_ai.settings.settings"
